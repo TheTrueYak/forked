@@ -6,6 +6,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.storage.loot.LootContext;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.yak.forked.Forked;
 import org.jspecify.annotations.NonNull;
 
@@ -18,8 +19,8 @@ public class WetCondition implements LootItemCondition {
     }
 
     @Override
-    public @NonNull MapCodec<? extends LootItemCondition> codec() {
-        return MAP_CODEC;
+    public @NonNull LootItemConditionType getType() {
+        return Forked.WET;
     }
 
     @Override
@@ -30,4 +31,5 @@ public class WetCondition implements LootItemCondition {
         }
         return false;
     }
+
 }

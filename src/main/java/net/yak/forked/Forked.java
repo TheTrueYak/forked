@@ -14,6 +14,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.*;
+import net.minecraft.world.level.storage.loot.predicates.LootItemConditionType;
 import net.yak.forked.networking.ReturnTridentC2SPayload;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,13 +25,15 @@ public class Forked implements ModInitializer {
 	public static final String MOD_ID = "forked";
 	public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
+	public static LootItemConditionType WET;
+
 	public static final AttachmentType<Integer> WET_ATTACHMENT = AttachmentRegistry.create(Identifier.fromNamespaceAndPath(MOD_ID, "wet_attachment"),
 			builder -> builder.initializer(() -> 0).syncWith(ByteBufCodecs.INT, AttachmentSyncPredicate.targetOnly()));
 
 	@Override
 	public void onInitialize() {
 
-		PayloadTypeRegistry.serverboundPlay().register(ReturnTridentC2SPayload.TYPE, ReturnTridentC2SPayload.CODEC);
+		PayloadTypeRegistry.playC2S().register(ReturnTridentC2SPayload.TYPE, ReturnTridentC2SPayload.CODEC);
 		ServerPlayNetworking.registerGlobalReceiver(ReturnTridentC2SPayload.TYPE, new ReturnTridentC2SPayload.Receiver());
 
 		DefaultItemComponentEvents.MODIFY.register(modifyContext -> {
