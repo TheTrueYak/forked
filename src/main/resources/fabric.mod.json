@@ -11,6 +11,7 @@
 	"license": "ARR",
 	"icon": "assets/forked/icon.png",
 	"environment": "*",
+	"accessWidener": "forked.accesswidener",
 	"entrypoints": {
 		"main": [
 			"net.yak.forked.Forked"
