@@ -39,7 +39,7 @@ public abstract class ThrownTridentMixin extends AbstractArrow {
 
     @Inject(method = "tick", at = @At("TAIL"))
     private void forked$preventVoidingTridents(CallbackInfo ci) {
-        if (this.getY() < -60) {
+        if (this.getY() < -65) {
             dealtDamage = true;
         }
     }

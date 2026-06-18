@@ -29,7 +29,7 @@ public abstract class MinecraftMixin {
         original.call(instance);
         if (forked$returnCooldown == 0 && instance.getMainHandItem().isEmpty()) {
             ClientPlayNetworking.send(new ReturnTridentC2SPayload());
-            forked$returnCooldown = 20;
+            forked$returnCooldown = 20; // prevent payload spam
         }
     }
 

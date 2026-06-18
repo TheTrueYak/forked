@@ -5,6 +5,7 @@
   "mixins": [
     "AbstractArrowMixin",
     "AbstractThrownPotionMixin",
+    "DrownedMixin",
     "ItemMixin",
     "LivingEntityMixin",
     "LootItemConditionsMixin",

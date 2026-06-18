@@ -36,21 +36,6 @@ public class Forked implements ModInitializer {
 		DefaultItemComponentEvents.MODIFY.register(modifyContext -> {
 			modifyContext.modify(item -> item instanceof TridentItem, (builder, item) -> {
 				float swingAnimationSeconds = 1.05F;
-				/*float chargeDamageMultiplier = 1.075F;
-				float chargeDelaySeconds = 0.5F;
-				float maxDurationForDismountSeconds = 3.0F;
-				float minSpeedForDismount = 7.5F;
-				float maxDurationForChargeKnockbackInSeconds = 6.5F;
-				float minSpeedForChargeKnockback = 5.1F;
-				float maxDurationForChargeDamageInSeconds = 10.0F;
-				float minRelativeSpeedForChargeDamage = 4.6F;
-				//builder.set(DataComponents.DAMAGE_TYPE, DamageTypes.TRIDENT);
-				/*builder.set(DataComponents.KINETIC_WEAPON, new KineticWeapon(10, (int) (chargeDelaySeconds * 20.0F),
-						KineticWeapon.Condition.ofAttackerSpeed((int) (maxDurationForDismountSeconds * 20.0F), minSpeedForDismount),
-						KineticWeapon.Condition.ofAttackerSpeed((int) (maxDurationForChargeKnockbackInSeconds * 20.0F), minSpeedForChargeKnockback),
-						KineticWeapon.Condition.ofRelativeSpeed((int) (maxDurationForChargeDamageInSeconds * 20.0F), minRelativeSpeedForChargeDamage),
-						0.38F, chargeDamageMultiplier, Optional.of(SoundEvents.SPEAR_HIT),
-						Optional.of(SoundEvents.SPEAR_HIT)));*/
 				builder.set(DataComponents.PIERCING_WEAPON, new PiercingWeapon(true, false,
 						Optional.of(SoundEvents.SPEAR_ATTACK),
 						Optional.of(SoundEvents.SPEAR_HIT)));

@@ -21,4 +21,5 @@ public abstract class AbstractThrownPotionMixin {
         }
         return box;
     }
+
 }
