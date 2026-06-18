@@ -1,0 +1,28 @@
+{
+	"schemaVersion": 1,
+	"id": "forked",
+	"version": "${version}",
+	"name": "Forked",
+	"description": "fork mod for fork mod. fuck you",
+	"authors": [
+		"yal",
+		"sembr"
+	],
+	"license": "ARR",
+	"icon": "assets/forked/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.yak.forked.Forked"
+		]
+	},
+	"mixins": [
+		"forked.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.3",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

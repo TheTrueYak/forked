@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "package": "net.yak.forked.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "mixins": [
+    "AbstractArrowMixin",
+    "AbstractThrownPotionMixin",
+    "ItemMixin",
+    "LivingEntityMixin",
+    "LootItemConditionsMixin",
+    "ProjectileMixin",
+    "ServerPlayerMixin",
+    "ThrownSplashPotionMixin",
+    "ThrownTridentMixin",
+    "TridentItemMixin"
+  ],
+  "client": [
+    "client.MinecraftMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
