@@ -15,6 +15,9 @@
 	"entrypoints": {
 		"main": [
 			"net.yak.forked.Forked"
+		],
+		"client": [
+			"net.yak.forked.ForkedClient"
 		]
 	},
 	"mixins": [

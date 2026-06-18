@@ -7,16 +7,19 @@
     "AbstractThrownPotionMixin",
     "DrownedMixin",
     "ItemMixin",
+    "ItemsMixin",
     "LivingEntityMixin",
     "LootItemConditionsMixin",
     "ProjectileMixin",
     "ServerPlayerMixin",
     "ThrownSplashPotionMixin",
     "ThrownTridentMixin",
-    "TridentItemMixin"
+    "TridentItemMixin",
+    "client.PackRepositoryMixin"
   ],
   "client": [
-    "client.MinecraftMixin"
+    "client.MinecraftMixin",
+    "client.TridentModelMixin"
   ],
   "injectors": {
     "defaultRequire": 1
