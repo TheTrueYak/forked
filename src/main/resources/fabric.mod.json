@@ -3,11 +3,14 @@
 	"id": "forked",
 	"version": "${version}",
 	"name": "Forked",
-	"description": "fork mod for fork mod. fuck you",
+	"description": "Overhauling the trident to be far more reliable, consistent, and intuitive",
 	"authors": [
-		"yal",
-		"sembr"
+		"TheTrueYak",
+		"SemberScythe"
 	],
+	"contact": {
+		"sources": "https://github.com/TheTrueYak/forked"
+	},
 	"license": "ARR",
 	"icon": "assets/forked/icon.png",
 	"environment": "*",
@@ -15,6 +18,9 @@
 	"entrypoints": {
 		"main": [
 			"net.yak.forked.Forked"
+		],
+		"client": [
+			"net.yak.forked.ForkedClient"
 		]
 	},
 	"mixins": [
